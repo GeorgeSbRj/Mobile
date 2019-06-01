@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-toolbar>
+     <ion-buttons slot="start" >
+       <ion-button (click)="toggleMenu()">
+         <ion-icon slot="icon-only" name="menu"></ion-icon>
+       </ion-button>
+     </ion-buttons>
+     
+    <ion-title>Guia rápido ionic4</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+<ion-list>
+  <ion-item  *ngFor="let c of componentes" 
+      [routerLink]="c.redirectTo" detail >
+      <ion-icon [name]="c.icon" slot="start" ></ion-icon>
+    <ion-label>{{c.name}}</ion-label>
+  </ion-item>
+</ion-list>
+
+
+    
+ <!-- aqui e a pagina principal-->
+ <ion-card >
+    <ion-img src="./assets/icon/logoionic.png"></ion-img>
+    <ion-label></ion-label>
+  </ion-card>
+   
+  <ion-text color=light>
+   <h1 class="espaco">Todas as particularidades desse Fantastico Framework estão aqui!</h1>
+  </ion-text>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    
+    <ion-icon name="logo-github" href="https://github.com/GeorgeSbRj"></ion-icon>
+    <ion-icon name="logo-facebook"></ion-icon>
+    <ion-icon name="logo-twitter"></ion-icon>
+  
+    <ion-title slot="end">dev<>GeorgeSbRj</ion-title>
+  </ion-toolbar>
+</ion-footer>
+<!-- <ion-button [routerLink]="['/alert']" routerLinkActive="router-link-active"  >
+  Alert
+</ion-button>
+
+<ion-button [routerLink]="['/action-sheet']" routerLinkActive="router-link-active"  >
+  Action Sheet
+</ion-button>
+-->

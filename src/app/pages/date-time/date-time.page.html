@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+   <ion-buttons slot="start" >
+     <ion-back-button defaultHref="/"></ion-back-button>
+   </ion-buttons>
+    <ion-title>Data e Hora</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+<!-- outro exemplo -->
+
+    <ion-list>  
+      <ion-label>Data de nascimento </ion-label>
+      <ion-datetime placeholder="Nascimento"
+                    display-format="DD-MM-YYYY" 
+                    cancelText="Cancelar"
+                    doneText="ok"
+                    [ngModel]="fechaNaci.toISOString()"
+                    (ionChange)="elementFecha( $event )"                                  
+      ></ion-datetime>
+    </ion-list>
+</ion-content>

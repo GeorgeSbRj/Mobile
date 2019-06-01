@@ -1,0 +1,27 @@
+
+<app-header [titulo]="titulo || 'alert page'"></app-header>
+
+<ion-content>
+
+    <ion-button expand="full" 
+    color="primary"
+    (click)="presentAlert()">
+Mostrar alert page 
+</ion-button> 
+
+
+<ion-button expand="full" 
+            color="secondary"
+            (click)="presentInput()">
+            Mostrar input 
+</ion-button> 
+  
+
+  
+</ion-content>
+
+
+<!--<ion-button [routerLink]="['/inicio']" routerLinkActive="router-link-active"  >
+    Inicio
+  </ion-button>
+-->
